@@ -1,0 +1,37 @@
+.container
+  #alertModal.modal-body{"ng-show" => "successAlert"}
+    .alert.alert-success
+      %button.close{"data-dismiss" => "modal-body", "ng-click" => "closeAlert()", :type => "button"} x
+      {{successTextAlert}}
+  #alertModal.modal-body{"ng-show" => "errorAlert"}
+    .alert.alert-danger
+      %button.close{"data-dismiss" => "modal-body", "ng-click" => "closeAlert()", :type => "button"} x
+      {{errorTextAlert}}
+  .page-header
+    .pull-right
+      %strong> Available Balance
+      \: ${{availableBalance}}
+    %h2 Statement
+  .statement-table
+    .table-responsive
+      %table.table.table-bordered
+        %thead
+          %tr.info
+            %th #
+            %th Date
+            %th Credit
+            %th Debit
+        %tbody
+          %tr{"ng-repeat" => "statement in statements track by $index"}
+            %th.text-right{:scope => "row"}
+              {{$index+1}}
+            %td
+              {{statement.created_at | date : "short"}}
+            %td
+              {{(statement.amount > 0 ? statement.amount:'-')}}
+            %td
+              {{(statement.amount < 0 ? (statement.amount - (statement.amount * 2)):'-')}}
+
+= render partial:  'deposit_popup'
+= render partial:  'withdraw_popup'
+= render partial:  'transfer_popup'

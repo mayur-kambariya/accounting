@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+mayur:
+  username: mayur
+
+surekha:
+  username: surekha
+
+testabc:
+  username: testabc

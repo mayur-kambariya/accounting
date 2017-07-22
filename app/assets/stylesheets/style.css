@@ -1,0 +1,45 @@
+.login-screen {
+    display: table;
+    height: 100vh;
+    width: 100%;
+    background: #efefef
+}
+body {
+    background: #efefef;
+}
+.table-row {
+    display: table-row;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.login-screen .container {
+    width: 400px;
+}
+.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+.navbar-static-top {
+    background: #fff;
+}
+.box {
+    border: 1px solid #ddd;
+    padding: 15px 25px;
+    border-radius: 6px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+.logo {
+    font-size: 36px;
+    font-weight: 900;
+}
+.logo a {
+    color: #000;
+}
+.modal-body{
+  display: inline-table !important;
+  width: 100% !important
+}

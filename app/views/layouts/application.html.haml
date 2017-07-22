@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %title= content_for?(:title) ? yield(:title) : 'Banking App'
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Banking App'}"}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = csrf_meta_tags
+  %body{"ng-app" => "bankTransferApp", "ng-controller" => "transferCtrl"}
+    %header
+      = render 'layouts/navigation'
+    = render 'layouts/messages'
+    = yield

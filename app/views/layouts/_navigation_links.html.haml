@@ -1,0 +1,13 @@
+%li
+  %a{"data-target" => "#depositModal", "data-toggle" => "modal", :href => "javascript:void(0);"} Deposit
+%li
+  %a{"data-target" => "#withdrawModal", "data-toggle" => "modal", :href => "javascript:void(0);"} Withdrawal
+%li
+  %a{"data-target" => "#transferModal", "data-toggle" => "modal", :href => "javascript:void(0);"} Transfer
+%li.dropdown.pull-right
+  %a#drop1.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "javascript:void(0);", :role => "button"}
+    {{currentUser.username}}
+    %span.caret
+  %ul.dropdown-menu{"aria-labelledby" => "drop1"}
+    %li{"ng-click" => "switchUser(account.id)", "ng-repeat" => "account in users"}
+      %a{:href => "#"} {{account.username}}

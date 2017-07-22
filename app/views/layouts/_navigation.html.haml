@@ -1,0 +1,15 @@
+-# navigation styled for Bootstrap 3.0
+.bs-docs-nav.navbar.navbar-static-top
+  .container
+    .row
+      .col-md-4.logo.col-xs-12
+        .navbar-header
+          %button.navbar-toggle.collapsed{"aria-controls" => "bs-navbar", "aria-expanded" => "false", "data-target" => "#bs-navbar", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => root_path} The Minimal Bank
+      #bs-navbar.col-md-8.col-xs-12.navbar-collapse.collapse.pull-right
+        %ul.nav.navbar-nav.pull-right
+          = render 'layouts/navigation_links'

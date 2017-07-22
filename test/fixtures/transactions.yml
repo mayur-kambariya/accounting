@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+mayur_credit_1:
+  amount: 100
+  bank_account_id: <%= ActiveRecord::FixtureSet.identify(:mayur) %>
+
+mayur_debit_1:
+  amount: -20
+  bank_account_id: <%= ActiveRecord::FixtureSet.identify(:mayur) %>
+
+mayur_debit_2:
+  amount: -35
+  bank_account_id: <%= ActiveRecord::FixtureSet.identify(:mayur) %>
